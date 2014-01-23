@@ -16,8 +16,8 @@ import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.AbstractHandler;
 
 // Serializable
-// Interface Comparable<T>
 
+// This is a comment
 public class MainServer extends AbstractHandler
 {
 	FileOutputStream fos = null;
