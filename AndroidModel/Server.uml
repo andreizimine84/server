@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_08oeAPDMEeOxF6n5iNv90Q" name="Model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_08oeAfDMEeOxF6n5iNv90Q">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_08pFEPDMEeOxF6n5iNv90Q" name="Activity1" node="_3RJeUPDMEeOxF6n5iNv90Q">
+    <node xmi:type="uml:InitialNode" xmi:id="_3RJeUPDMEeOxF6n5iNv90Q" name="InitialNode"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_08tWgPDMEeOxF6n5iNv90Q" name="Interaction1"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_082gcPDMEeOxF6n5iNv90Q" name="Interaction2"/>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_083ukPDMEeOxF6n5iNv90Q" name="StateMachine0">
+    <region xmi:type="uml:Region" xmi:id="_083ukfDMEeOxF6n5iNv90Q" name="Region0"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_5E568PDMEeOxF6n5iNv90Q" name="Activity2" node="_5xIu0PDMEeOxF6n5iNv90Q _7iPgEPDMEeOxF6n5iNv90Q _HNUAEPDNEeOxF6n5iNv90Q _Me-G8PDNEeOxF6n5iNv90Q _RsZ1IPDNEeOxF6n5iNv90Q _V3WyoPDNEeOxF6n5iNv90Q _YmvKAPDNEeOxF6n5iNv90Q _eO0z4PDNEeOxF6n5iNv90Q">
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_9aFLcPDMEeOxF6n5iNv90Q" name="InputStream"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_CEjWgPDNEeOxF6n5iNv90Q" name="ByteArrayInputStream"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_IZeRMPDNEeOxF6n5iNv90Q" name="ByteArrayOutputStream"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_N2M_oPDNEeOxF6n5iNv90Q" name="Is ( READ )"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_W2xoQPDNEeOxF6n5iNv90Q" name="null"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_aH5awPDNEeOxF6n5iNv90Q" name="!= null"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_hlLrsPDNEeOxF6n5iNv90Q" name="ControlFlow" source="_V3WyoPDNEeOxF6n5iNv90Q" target="_eO0z4PDNEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_id3AIPDNEeOxF6n5iNv90Q" name="ControlFlow1" source="_YmvKAPDNEeOxF6n5iNv90Q" target="_eO0z4PDNEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jYmxIPDNEeOxF6n5iNv90Q" name="ControlFlow2" source="_RsZ1IPDNEeOxF6n5iNv90Q" target="_YmvKAPDNEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_k1NSAPDNEeOxF6n5iNv90Q" name="ControlFlow3" source="_RsZ1IPDNEeOxF6n5iNv90Q" target="_V3WyoPDNEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_l9jaIPDNEeOxF6n5iNv90Q" name="ControlFlow4" source="_Me-G8PDNEeOxF6n5iNv90Q" target="_RsZ1IPDNEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_mtJrEPDNEeOxF6n5iNv90Q" name="ControlFlow5" source="_HNUAEPDNEeOxF6n5iNv90Q" target="_Me-G8PDNEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_nQqn0PDNEeOxF6n5iNv90Q" name="ControlFlow6" source="_7iPgEPDMEeOxF6n5iNv90Q" target="_HNUAEPDNEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_5xIu0PDMEeOxF6n5iNv90Q" name="ActivityFinalNode"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_7iPgEPDMEeOxF6n5iNv90Q" name="InputStream" outgoing="_nQqn0PDNEeOxF6n5iNv90Q" behavior="_9aFLcPDMEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_HNUAEPDNEeOxF6n5iNv90Q" name="ByteArrayOutputStream" outgoing="_mtJrEPDNEeOxF6n5iNv90Q" incoming="_nQqn0PDNEeOxF6n5iNv90Q" behavior="_IZeRMPDNEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_Me-G8PDNEeOxF6n5iNv90Q" name="Is ( READ )" outgoing="_l9jaIPDNEeOxF6n5iNv90Q" incoming="_mtJrEPDNEeOxF6n5iNv90Q" behavior="_N2M_oPDNEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_RsZ1IPDNEeOxF6n5iNv90Q" name="DecisionNode" outgoing="_jYmxIPDNEeOxF6n5iNv90Q _k1NSAPDNEeOxF6n5iNv90Q" incoming="_l9jaIPDNEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_V3WyoPDNEeOxF6n5iNv90Q" name="null" outgoing="_hlLrsPDNEeOxF6n5iNv90Q" incoming="_k1NSAPDNEeOxF6n5iNv90Q" behavior="_W2xoQPDNEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_YmvKAPDNEeOxF6n5iNv90Q" name="!= null" outgoing="_id3AIPDNEeOxF6n5iNv90Q" incoming="_jYmxIPDNEeOxF6n5iNv90Q" behavior="_aH5awPDNEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:FlowFinalNode" xmi:id="_eO0z4PDNEeOxF6n5iNv90Q" name="FlowFinalNode" incoming="_hlLrsPDNEeOxF6n5iNv90Q _id3AIPDNEeOxF6n5iNv90Q"/>
+  </packagedElement>
+</uml:Model>

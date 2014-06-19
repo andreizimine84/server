@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_M09QsPPQEeOI5NhDSP2rYg" name="model">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_M1BiIPPQEeOI5NhDSP2rYg" name="Activity1"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_M1KFAPPQEeOI5NhDSP2rYg" name="Interaction1"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_M1c_8PPQEeOI5NhDSP2rYg" name="Interaction2"/>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_M1h4cPPQEeOI5NhDSP2rYg" name="StateMachine0">
+    <region xmi:type="uml:Region" xmi:id="_M1h4cfPQEeOI5NhDSP2rYg" name="Region0"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_mHgTAPPQEeOI5NhDSP2rYg" name="Activity2" node="_mzM7YPPQEeOI5NhDSP2rYg _neRRoPPQEeOI5NhDSP2rYg _5SYMcPPQEeOI5NhDSP2rYg _V9uWkPPREeOI5NhDSP2rYg _lxua0PPREeOI5NhDSP2rYg _Fb8w4PPSEeOI5NhDSP2rYg _RHHXgPPSEeOI5NhDSP2rYg _b-tMIPPSEeOI5NhDSP2rYg _oHMA4PPSEeOI5NhDSP2rYg">
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_pq9LoPPQEeOI5NhDSP2rYg" name="Server"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_7fkcwPPQEeOI5NhDSP2rYg" name="ClientMainActivity"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_nEmX8PPREeOI5NhDSP2rYg" name="OnClick ( )"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_HMUiUPPSEeOI5NhDSP2rYg" name="StartRepeatingTimer"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_VLS-oPPSEeOI5NhDSP2rYg" name="AlarmManagerBroadcastReciever"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_hWz5QPPSEeOI5NhDSP2rYg" name="FileService"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_zCmQcPPQEeOI5NhDSP2rYg" name="ControlFlow" source="_mzM7YPPQEeOI5NhDSP2rYg" target="_neRRoPPQEeOI5NhDSP2rYg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_BxGsQPPREeOI5NhDSP2rYg" name="ControlFlow1" source="_neRRoPPQEeOI5NhDSP2rYg" target="_5SYMcPPQEeOI5NhDSP2rYg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jpVyAPPREeOI5NhDSP2rYg" name="ControlFlow2" source="_5SYMcPPQEeOI5NhDSP2rYg" target="_V9uWkPPREeOI5NhDSP2rYg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_yTJUAPPREeOI5NhDSP2rYg" name="ControlFlow3" source="_V9uWkPPREeOI5NhDSP2rYg" target="_lxua0PPREeOI5NhDSP2rYg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_M9ZJEPPSEeOI5NhDSP2rYg" name="ControlFlow4" source="_lxua0PPREeOI5NhDSP2rYg" target="_Fb8w4PPSEeOI5NhDSP2rYg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_YGKNQPPSEeOI5NhDSP2rYg" name="ControlFlow5" source="_Fb8w4PPSEeOI5NhDSP2rYg" target="_RHHXgPPSEeOI5NhDSP2rYg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_l-vGoPPSEeOI5NhDSP2rYg" name="ControlFlow6" source="_RHHXgPPSEeOI5NhDSP2rYg" target="_b-tMIPPSEeOI5NhDSP2rYg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_p2pMUPPSEeOI5NhDSP2rYg" name="ControlFlow7" source="_b-tMIPPSEeOI5NhDSP2rYg" target="_oHMA4PPSEeOI5NhDSP2rYg"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_mzM7YPPQEeOI5NhDSP2rYg" name="InitialNode" outgoing="_zCmQcPPQEeOI5NhDSP2rYg"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_neRRoPPQEeOI5NhDSP2rYg" name="Server" outgoing="_BxGsQPPREeOI5NhDSP2rYg" incoming="_zCmQcPPQEeOI5NhDSP2rYg" behavior="_pq9LoPPQEeOI5NhDSP2rYg"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_5SYMcPPQEeOI5NhDSP2rYg" name="ClientMainActivity" outgoing="_jpVyAPPREeOI5NhDSP2rYg" incoming="_BxGsQPPREeOI5NhDSP2rYg" behavior="_7fkcwPPQEeOI5NhDSP2rYg"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_V9uWkPPREeOI5NhDSP2rYg" name="DecisionNode" outgoing="_yTJUAPPREeOI5NhDSP2rYg" incoming="_jpVyAPPREeOI5NhDSP2rYg"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_lxua0PPREeOI5NhDSP2rYg" name="OnClick ( )" outgoing="_M9ZJEPPSEeOI5NhDSP2rYg" incoming="_yTJUAPPREeOI5NhDSP2rYg" behavior="_nEmX8PPREeOI5NhDSP2rYg"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_Fb8w4PPSEeOI5NhDSP2rYg" name="StartRepeatingTimer" outgoing="_YGKNQPPSEeOI5NhDSP2rYg" incoming="_M9ZJEPPSEeOI5NhDSP2rYg" behavior="_HMUiUPPSEeOI5NhDSP2rYg"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_RHHXgPPSEeOI5NhDSP2rYg" name="AlarmManagerBroadcastReciever" outgoing="_l-vGoPPSEeOI5NhDSP2rYg" incoming="_YGKNQPPSEeOI5NhDSP2rYg" behavior="_VLS-oPPSEeOI5NhDSP2rYg"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_b-tMIPPSEeOI5NhDSP2rYg" name="FileService" outgoing="_p2pMUPPSEeOI5NhDSP2rYg" incoming="_l-vGoPPSEeOI5NhDSP2rYg" behavior="_hWz5QPPSEeOI5NhDSP2rYg"/>
+    <node xmi:type="uml:FlowFinalNode" xmi:id="_oHMA4PPSEeOI5NhDSP2rYg" name="FlowFinalNode" incoming="_p2pMUPPSEeOI5NhDSP2rYg"/>
+  </packagedElement>
+</uml:Model>

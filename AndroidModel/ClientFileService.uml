@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_-ikIYPDKEeOxF6n5iNv90Q" name="Model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_-ikIYfDKEeOxF6n5iNv90Q">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_-ikvcPDKEeOxF6n5iNv90Q" name="Activity1"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_-imkoPDKEeOxF6n5iNv90Q" name="Interaction1"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_-isEMPDKEeOxF6n5iNv90Q" name="Interaction2"/>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_-itSUPDKEeOxF6n5iNv90Q" name="StateMachine0">
+    <region xmi:type="uml:Region" xmi:id="_-itSUfDKEeOxF6n5iNv90Q" name="Region0"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_C-rHUPDLEeOxF6n5iNv90Q" name="Activity2" node="_GCZ-EPDLEeOxF6n5iNv90Q _H3_msPDLEeOxF6n5iNv90Q _LnMcUPDLEeOxF6n5iNv90Q _bkOgwPDLEeOxF6n5iNv90Q _At13sPDMEeOxF6n5iNv90Q _LawtYPDMEeOxF6n5iNv90Q _Tkra0PDMEeOxF6n5iNv90Q">
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_Ix97oPDLEeOxF6n5iNv90Q" name="OutputStream"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_MrWoAPDLEeOxF6n5iNv90Q" name="InputStream"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_RK2SIPDLEeOxF6n5iNv90Q" name="GetStream"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_cjVNUPDLEeOxF6n5iNv90Q" name="GetStream ( )"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_B2p54PDMEeOxF6n5iNv90Q" name="While ( READ )"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_GyVwwPDMEeOxF6n5iNv90Q" name="ByteArrayOutputStream"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_PNbGsPDMEeOxF6n5iNv90Q" name="ByteArrayOutputStream While ( READ )"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Z5dyoPDMEeOxF6n5iNv90Q" name="ControlFlow" source="_H3_msPDLEeOxF6n5iNv90Q" target="_LnMcUPDLEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ami7EPDMEeOxF6n5iNv90Q" name="ControlFlow1" source="_LnMcUPDLEeOxF6n5iNv90Q" target="_bkOgwPDLEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_bZBg4PDMEeOxF6n5iNv90Q" name="ControlFlow2" source="_bkOgwPDLEeOxF6n5iNv90Q" target="_At13sPDMEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_cBZvgPDMEeOxF6n5iNv90Q" name="ControlFlow3" source="_At13sPDMEeOxF6n5iNv90Q" target="_LawtYPDMEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_dEMpQPDMEeOxF6n5iNv90Q" name="ControlFlow4" source="_LawtYPDMEeOxF6n5iNv90Q" target="_Tkra0PDMEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_GCZ-EPDLEeOxF6n5iNv90Q" name="ActivityFinalNode"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_H3_msPDLEeOxF6n5iNv90Q" name="OutputStream" outgoing="_Z5dyoPDMEeOxF6n5iNv90Q" behavior="_Ix97oPDLEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_LnMcUPDLEeOxF6n5iNv90Q" name="InputStream" outgoing="_ami7EPDMEeOxF6n5iNv90Q" incoming="_Z5dyoPDMEeOxF6n5iNv90Q" behavior="_MrWoAPDLEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_bkOgwPDLEeOxF6n5iNv90Q" name="GetStream ( )" outgoing="_bZBg4PDMEeOxF6n5iNv90Q" incoming="_ami7EPDMEeOxF6n5iNv90Q" behavior="_cjVNUPDLEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_At13sPDMEeOxF6n5iNv90Q" name="While ( READ )" outgoing="_cBZvgPDMEeOxF6n5iNv90Q" incoming="_bZBg4PDMEeOxF6n5iNv90Q" behavior="_B2p54PDMEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_LawtYPDMEeOxF6n5iNv90Q" name="ByteArrayOutputStream While ( READ )" outgoing="_dEMpQPDMEeOxF6n5iNv90Q" incoming="_cBZvgPDMEeOxF6n5iNv90Q" behavior="_PNbGsPDMEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:FlowFinalNode" xmi:id="_Tkra0PDMEeOxF6n5iNv90Q" name="FlowFinalNode" incoming="_dEMpQPDMEeOxF6n5iNv90Q"/>
+  </packagedElement>
+</uml:Model>

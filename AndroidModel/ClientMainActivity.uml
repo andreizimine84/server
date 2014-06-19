@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_9tVVEPDAEeOxF6n5iNv90Q" name="Model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_9tVVEfDAEeOxF6n5iNv90Q">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_o3WvQPDBEeOxF6n5iNv90Q">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_9txZ8PDAEeOxF6n5iNv90Q" name="Activity1" node="_8LlRoPDEEeOxF6n5iNv90Q _8sSyAPDEEeOxF6n5iNv90Q">
+    <node xmi:type="uml:ActivityParameterNode" xmi:id="_8LlRoPDEEeOxF6n5iNv90Q">
+      <upperBound xmi:type="uml:LiteralInteger" xmi:id="_8LlRofDEEeOxF6n5iNv90Q" value="1"/>
+    </node>
+    <node xmi:type="uml:ActivityParameterNode" xmi:id="_8sSyAPDEEeOxF6n5iNv90Q">
+      <upperBound xmi:type="uml:LiteralInteger" xmi:id="_8sTZEPDEEeOxF6n5iNv90Q" value="1"/>
+    </node>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_9uMQsPDAEeOxF6n5iNv90Q" name="Interaction1"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_9uhn4PDAEeOxF6n5iNv90Q" name="Interaction2"/>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_9uvqUPDAEeOxF6n5iNv90Q" name="StateMachine0">
+    <region xmi:type="uml:Region" xmi:id="_9uxfgPDAEeOxF6n5iNv90Q" name="Region0"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_Lz1q0PDDEeOxF6n5iNv90Q" name="Interaction3"/>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_cyq4kPDFEeOxF6n5iNv90Q" name="Activity2" node="_e_HiAPDFEeOxF6n5iNv90Q _g1rbAPDFEeOxF6n5iNv90Q _jEKr0PDFEeOxF6n5iNv90Q _vvqHAPDFEeOxF6n5iNv90Q _HGH3IPDGEeOxF6n5iNv90Q _Rs7dwPDGEeOxF6n5iNv90Q _ez5UAPDGEeOxF6n5iNv90Q _kv_fAPDGEeOxF6n5iNv90Q _o5YWQPDGEeOxF6n5iNv90Q">
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_oG9QQPDFEeOxF6n5iNv90Q" name="Intent(FileService)"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_CBCMoPDGEeOxF6n5iNv90Q" name="Activity"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_KzXk8PDGEeOxF6n5iNv90Q" name="StartRepeatingTimer"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_WN5ukPDGEeOxF6n5iNv90Q" name="CancelRepeatingTimer"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_geB6kPDGEeOxF6n5iNv90Q" name="OneTimeTimer"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_mcbLoPDGEeOxF6n5iNv90Q" name="Run(Intent)"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_se0y8PDGEeOxF6n5iNv90Q" name="StartService(Intent)"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_rYD0oPDFEeOxF6n5iNv90Q" name="ControlFlow" source="_g1rbAPDFEeOxF6n5iNv90Q" target="_jEKr0PDFEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_9u96gPDFEeOxF6n5iNv90Q" name="ControlFlow1" source="_jEKr0PDFEeOxF6n5iNv90Q" target="_vvqHAPDFEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_O6smsPDGEeOxF6n5iNv90Q" name="ControlFlow3" source="_vvqHAPDFEeOxF6n5iNv90Q" target="_HGH3IPDGEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_aX5CwPDGEeOxF6n5iNv90Q" name="ControlFlow4" source="_vvqHAPDFEeOxF6n5iNv90Q" target="_Rs7dwPDGEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_idTDoPDGEeOxF6n5iNv90Q" name="ControlFlow5" source="_vvqHAPDFEeOxF6n5iNv90Q" target="_ez5UAPDGEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_yjww4PDGEeOxF6n5iNv90Q" name="ControlFlow6" source="_ez5UAPDGEeOxF6n5iNv90Q" target="_kv_fAPDGEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_zVTikPDGEeOxF6n5iNv90Q" name="ControlFlow7" source="_kv_fAPDGEeOxF6n5iNv90Q" target="_o5YWQPDGEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_0M5R4PDGEeOxF6n5iNv90Q" name="ControlFlow8" source="_o5YWQPDGEeOxF6n5iNv90Q" target="_e_HiAPDFEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:FlowFinalNode" xmi:id="_e_HiAPDFEeOxF6n5iNv90Q" name="FlowFinalNode" incoming="_0M5R4PDGEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_g1rbAPDFEeOxF6n5iNv90Q" name="InitialNode" outgoing="_rYD0oPDFEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_jEKr0PDFEeOxF6n5iNv90Q" name="Intent(FileService)" outgoing="_9u96gPDFEeOxF6n5iNv90Q" incoming="_rYD0oPDFEeOxF6n5iNv90Q" behavior="_oG9QQPDFEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_vvqHAPDFEeOxF6n5iNv90Q" name="MergeNode" outgoing="_O6smsPDGEeOxF6n5iNv90Q _aX5CwPDGEeOxF6n5iNv90Q _idTDoPDGEeOxF6n5iNv90Q" incoming="_9u96gPDFEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_HGH3IPDGEeOxF6n5iNv90Q" name="StartRepeatingTimer" incoming="_O6smsPDGEeOxF6n5iNv90Q" behavior="_KzXk8PDGEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_Rs7dwPDGEeOxF6n5iNv90Q" name="CancelRepeatingTimer" incoming="_aX5CwPDGEeOxF6n5iNv90Q" behavior="_WN5ukPDGEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_ez5UAPDGEeOxF6n5iNv90Q" name="OneTimeTimer" outgoing="_yjww4PDGEeOxF6n5iNv90Q" incoming="_idTDoPDGEeOxF6n5iNv90Q" behavior="_geB6kPDGEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_kv_fAPDGEeOxF6n5iNv90Q" name="Run(Intent)" outgoing="_zVTikPDGEeOxF6n5iNv90Q" incoming="_yjww4PDGEeOxF6n5iNv90Q" behavior="_mcbLoPDGEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_o5YWQPDGEeOxF6n5iNv90Q" name="StartService(Intent)" outgoing="_0M5R4PDGEeOxF6n5iNv90Q" incoming="_zVTikPDGEeOxF6n5iNv90Q" behavior="_se0y8PDGEeOxF6n5iNv90Q"/>
+  </packagedElement>
+</uml:Model>

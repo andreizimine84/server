@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_pdrOwPDJEeOxF6n5iNv90Q" name="Model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_pdrOwfDJEeOxF6n5iNv90Q">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_pdr10PDJEeOxF6n5iNv90Q" name="Activity1"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_pduSEPDJEeOxF6n5iNv90Q" name="Interaction1"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_pdzxoPDJEeOxF6n5iNv90Q" name="Interaction2"/>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_pd0_wPDJEeOxF6n5iNv90Q" name="StateMachine0">
+    <region xmi:type="uml:Region" xmi:id="_pd1m0PDJEeOxF6n5iNv90Q" name="Region0"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_7mnKEPDJEeOxF6n5iNv90Q" name="Activity2" node="_-QmrIPDJEeOxF6n5iNv90Q __BiY0PDJEeOxF6n5iNv90Q _Bo744PDKEeOxF6n5iNv90Q _IFBykPDKEeOxF6n5iNv90Q _V5luoPDKEeOxF6n5iNv90Q _Zr5ioPDKEeOxF6n5iNv90Q _enxmwPDKEeOxF6n5iNv90Q _jx6wYPDKEeOxF6n5iNv90Q">
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_JOYnUPDKEeOxF6n5iNv90Q" name="SetAlarm"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_XQda8PDKEeOxF6n5iNv90Q" name="CancelAlarm"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_bs_QoPDKEeOxF6n5iNv90Q" name="SetOneTimeTimer"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_fh0NIPDKEeOxF6n5iNv90Q" name="OnRecieve"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_lQr0cPDKEeOxF6n5iNv90Q" name="StartService(Intent)"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_pQ4TcPDKEeOxF6n5iNv90Q" name="ControlFlow" source="_-QmrIPDJEeOxF6n5iNv90Q" target="_Bo744PDKEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_rKan8PDKEeOxF6n5iNv90Q" name="ControlFlow1" source="_Bo744PDKEeOxF6n5iNv90Q" target="_IFBykPDKEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_r1FVkPDKEeOxF6n5iNv90Q" name="ControlFlow2" source="_Bo744PDKEeOxF6n5iNv90Q" target="_V5luoPDKEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_si42wPDKEeOxF6n5iNv90Q" name="ControlFlow3" source="_Bo744PDKEeOxF6n5iNv90Q" target="_Zr5ioPDKEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_tVexUPDKEeOxF6n5iNv90Q" name="ControlFlow4" source="_Zr5ioPDKEeOxF6n5iNv90Q" target="_enxmwPDKEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_uFJ6wPDKEeOxF6n5iNv90Q" name="ControlFlow5" source="_enxmwPDKEeOxF6n5iNv90Q" target="_jx6wYPDKEeOxF6n5iNv90Q"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_u2c00PDKEeOxF6n5iNv90Q" name="ControlFlow6" source="_jx6wYPDKEeOxF6n5iNv90Q" target="__BiY0PDJEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_-QmrIPDJEeOxF6n5iNv90Q" name="InitialNode" outgoing="_pQ4TcPDKEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:FlowFinalNode" xmi:id="__BiY0PDJEeOxF6n5iNv90Q" name="FlowFinalNode" incoming="_u2c00PDKEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_Bo744PDKEeOxF6n5iNv90Q" name="MergeNode" outgoing="_rKan8PDKEeOxF6n5iNv90Q _r1FVkPDKEeOxF6n5iNv90Q _si42wPDKEeOxF6n5iNv90Q" incoming="_pQ4TcPDKEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_IFBykPDKEeOxF6n5iNv90Q" name="SetAlarm" incoming="_rKan8PDKEeOxF6n5iNv90Q" behavior="_JOYnUPDKEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_V5luoPDKEeOxF6n5iNv90Q" name="CancelAlarm" incoming="_r1FVkPDKEeOxF6n5iNv90Q" behavior="_XQda8PDKEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_Zr5ioPDKEeOxF6n5iNv90Q" name="SetOneTimeTimer" outgoing="_tVexUPDKEeOxF6n5iNv90Q" incoming="_si42wPDKEeOxF6n5iNv90Q" behavior="_bs_QoPDKEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_enxmwPDKEeOxF6n5iNv90Q" name="OnRecieve" outgoing="_uFJ6wPDKEeOxF6n5iNv90Q" incoming="_tVexUPDKEeOxF6n5iNv90Q" behavior="_fh0NIPDKEeOxF6n5iNv90Q"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_jx6wYPDKEeOxF6n5iNv90Q" name="StartService(Intent)" outgoing="_u2c00PDKEeOxF6n5iNv90Q" incoming="_uFJ6wPDKEeOxF6n5iNv90Q" behavior="_lQr0cPDKEeOxF6n5iNv90Q"/>
+  </packagedElement>
+</uml:Model>
