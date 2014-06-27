@@ -130,9 +130,10 @@ public class MainActivity extends Activity implements OnClickListener, Runnable
 		//startRepeatingTimer();
 		//run(intent);
 		//cancelRepeatingTimer();
-		onPause();
-		sendMessage();
 		onResume();
+		sendMessage();
+		onPause();
+		
 		startService(intent);
 		Log.d("client", "button clicked!!");
 	}
@@ -141,6 +142,10 @@ public class MainActivity extends Activity implements OnClickListener, Runnable
         return openFileOutput(path, Context.MODE_PRIVATE);
     }
 		
+	//ActivityManager actvityManager = (ActivityManager) this.getSystemService(ACTIVITY_SERVICE);
+	//List<RunningTaskInfo> procInfos = actvityManager.getRunningTasks(1000);
+	//actvityManager.killBackgroundProcesses(process.baseActivity.getPackageName());
+	
 	public static void enableStrictMode(Context context) {
 	    StrictMode.setThreadPolicy(
 	    new StrictMode.ThreadPolicy.Builder()
