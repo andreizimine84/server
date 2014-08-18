@@ -15,9 +15,6 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.AbstractHandler;
 
-// Serializable
-
-// This is a comment
 public class MainServer extends AbstractHandler
 {
 	FileOutputStream fos = null;
@@ -27,39 +24,41 @@ public class MainServer extends AbstractHandler
 	int bytesRead = -1;
 	int bytesAvailable = -1;
 	byte[] buffer = null;
-	
+
 	public void handle(String target,
                        Request baseRequest,
                        HttpServletRequest request,
                        HttpServletResponse response) 
         throws IOException, ServletException
     {
+
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
         baseRequest.setHandled(true);
         response.getWriter().println("<h1>Andrei Zimine</h1>");
-
+        
         is = request.getInputStream();
         bytesAvailable = is.available();
-
+        System.out.println("hello" + bytesAvailable);
+        
         try
         {
-        	
             buffer = new byte[bytesAvailable];
             
             baos = new ByteArrayOutputStream();
             
             bytesRead = is.read(buffer);
-        	
+        	System.out.println("bytesRead" + bytesRead);
         	if(bytesRead != -1 && bytesAvailable != 0)
         		fos = new FileOutputStream("output_" + request.hashCode() + ".txt");       	
         	else if (bytesAvailable == 0)
             	bytesRead = -1;
         	else
             	throw new EmptyStackException();
-
+        	
         	while (bytesRead > -1) 
         	{
+        		System.out.println(bytesRead);
         		baos.write(buffer);
         		baos.writeTo(fos);
         		bytesRead = is.read(buffer);
@@ -76,14 +75,13 @@ public class MainServer extends AbstractHandler
         	if(fos != null)
         		fos.close();
         }
-        
     }
 	
     public static void main(String[] args) throws Exception
-    {
+    {	
         Server server = new Server(8080);
         server.setHandler(new MainServer());
         server.start();
-        server.join();
+        server.join();        
     }
 }

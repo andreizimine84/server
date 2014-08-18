@@ -1,107 +1,54 @@
 package com.helloworld;
 
-import java.io.ByteArrayOutputStream;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
+import android.app.AlarmManager;
 import android.app.IntentService;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.text.format.DateUtils;
+import android.text.format.Time;
 
-public class FileService extends IntentService{
-	
+/**
+ * 
+ * @author andreizimine
+FileService med SeleceAndShareService klasserna skapar med hjälp av broadcastreceivers från MainActivity 
+OnCreate metoden en alarm funktionalitet då FileService skickar filerna till server varje t.ex minut och 
+SelectAndShareService som skapar filerna i intern minne på telefonen. Båda service använder sig av 
+hjälpklasser i form av objekt och dessa i behov anropar andra objekt som dem behöver hjälp med att handskas 
+med t. ex offline funtionalitet.  
+ *
+ * 
+ */
+
+public class FileService extends IntentService {
+
+	String dirName = "tempDirectory";
+	byte[] buffer = null;
+	InputStream is = null;
+
 	public FileService(){
 		super("FileService");
 	}
-	
-	//AlarmManager skapar trådar automatiskt i onResieve
-	
-	protected void onHandleIntent(Intent intent) {
-	    String filename = "myfile";
-	    String outputString = "Hello world!";
-	    URL url;
-	    try {
-	        FileOutputStream outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
-	        outputStream.write(outputString.getBytes());
-	        outputStream.close();
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
 
-	    try {
-	        FileInputStream inputStream = openFileInput(filename);
-	        /*BufferedReader r = new BufferedReader(new InputStreamReader(inputStream));
-	        StringBuilder total = new StringBuilder();
-	        String line;
-	        while ((line = r.readLine()) != null) {
-	            total.append(line);
-	        }*/
-			url = new URL("http://10.0.2.2:8080");
-			
-			String charset = "UTF-8";
-
-			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-			
-			conn.setRequestMethod("POST");
-			conn.setDoOutput(true);
-			conn.setDoInput(true);
-			conn.setRequestProperty("Accept-Charset", charset);
-			conn.setRequestProperty("ENCTYPE", "multipart/form-data");
-			conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + charset);
-			OutputStream output = conn.getOutputStream();
-			
-			output.write(getStream(inputStream).toByteArray());
-			
-			output.close();
-		
-			conn.getInputStream();
-	        
-	        //r.close();
-	        inputStream.close();
-	        //Log.d("File", "File contents: " + total);
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
-	    publishResults();
+	protected void onHandleIntent(Intent intent) throws NullPointerException{
+		FileSender.main(intent, this.getApplicationContext());
+		scheduleNextUpdate();
 	}
 
-	  private void publishResults() {
-		    Intent intent = new Intent(Intent.ACTION_SEND);
-		    //intent.putExtra(FILEPATH, outputPath);
-		    //intent.putExtra(Intent.EXTRA_STREAM, result);
-		    sendBroadcast(intent);
-	  }
-	
-	public ByteArrayOutputStream getStream (InputStream is) throws IOException
+	public void scheduleNextUpdate()
 	{
-		
-		int size = is.available();
-		byte[] query = new byte[size];
-		
-		int nRead;
+		Intent intent = new Intent(this, this.getClass());
+		PendingIntent pendingIntent =
+				PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		
-		try {
+		long currentTimeMillis = System.currentTimeMillis();
+		long nextUpdateTimeMillis = currentTimeMillis + 1 * DateUtils.MINUTE_IN_MILLIS;
+		Time nextUpdateTime = new Time();
+		nextUpdateTime.set(nextUpdateTimeMillis);
 
-			while ((nRead = is.read(query, 0, query.length)) != -1)
-			{
-				  baos.write(query, 0, nRead);
-			}
-
-				baos.flush();
-
-		 }
-		 catch (IOException e) {
-			e.printStackTrace();
-		 }
-		
-		return baos;
+		AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+		alarmManager.set(AlarmManager.RTC, nextUpdateTimeMillis, pendingIntent);
 	}
-	
 }
