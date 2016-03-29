@@ -1,15 +1,11 @@
 package com.helloworld;
 
 import java.io.ByteArrayOutputStream;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
-import java.util.EmptyStackException;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
@@ -26,6 +22,8 @@ public class MainServer extends AbstractHandler
 	FileOutputStream fos = null;
 	ByteArrayOutputStream baos = null;
 	InputStream is = null;
+	int[] titleName = new int[100];
+	int[] titleValue = new int[100];
     private static final Logger LOG = Logger.getLogger(MainServer.class.getName());
 	
 	int bytesRead = -1;
@@ -51,8 +49,8 @@ public class MainServer extends AbstractHandler
         	bytesRead = is.read(buffer, 0, is.available());
             while(bytesRead != -1)
         		bytesRead = is.read(buffer, bytesRead, is.available());
+            StringBuilder sb = new StringBuilder();
 
-    		StringBuffer sb = new StringBuffer();
     		//byte[] mdbytes = null;
        		if(buffer.length == contentLength){
             	md = MessageDigest.getInstance("SHA-1");
@@ -106,7 +104,7 @@ public class MainServer extends AbstractHandler
         		fos.close();
         }
     }
-	
+		
     public static void main(String[] args) throws Exception
     {	
         Server server = new Server(8080);
