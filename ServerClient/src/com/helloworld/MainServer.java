@@ -29,6 +29,8 @@ public class MainServer extends AbstractHandler
 	int bytesRead = -1;
 	//byte[] buffer = null;
 	MessageDigest md = null;
+
+	// när anropas denna?
 	public void handle(String target,
                        Request baseRequest,
                        HttpServletRequest request,
@@ -39,18 +41,26 @@ public class MainServer extends AbstractHandler
         response.setStatus(HttpServletResponse.SC_OK);
         baseRequest.setHandled(true);
         response.getWriter().println("<h1>Andrei Zimine</h1>");
-        is = request.getInputStream();
+        is = request.getInputStream();       
         int contentLength = request.getContentLength();
         String sha1FromSender = request.getHeader("X-checksum");
         try
         {
         	byte[] buffer = new byte[contentLength];
             baos = new ByteArrayOutputStream();
-        	bytesRead = is.read(buffer, 0, is.available());
-            while(bytesRead != -1)
-        		bytesRead = is.read(buffer, bytesRead, is.available());
+            int totalBytesRead = 0;
+            while (true) {
+            	
+	        	bytesRead = is.read(buffer, 0, is.available());
+	        	if (bytesRead == -1)
+	        		break;
+	        	totalBytesRead += bytesRead;
+            }
             StringBuilder sb = new StringBuilder();
 
+            if (contentLength != totalBytesRead) {
+           		System.err.println("totalBytesRead does not match contentLength!");
+    		}
     		//byte[] mdbytes = null;
        		if(buffer.length == contentLength){
             	md = MessageDigest.getInstance("SHA-1");
